@@ -60,17 +60,6 @@
                         <!-- /.input group -->
                     </div>
                     <!-- /.form group -->
-                    <div class="form-group">
-                        <label>Logo Empresa</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="far fa-images"></i></span>
-                            </div>
-                            <input type="file" class="form-control" name="logo" value="{{ $empresa->logo}}">
-                        </div>
-                        <!-- /.input group -->
-                    </div>
-                    <!-- /.form group -->
             </div>
             <!-- /.card-body -->
             <div class="card-footer ">

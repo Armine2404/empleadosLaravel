@@ -23,11 +23,11 @@ class EmpresaController extends Controller
             'name' => 'required',
             'email' => 'email',
         ]); 
+      
        $empresa->update([
            "name" => $request->name,
            "email" => $request->email,
            "website" => $request->website,
-           "logo" => $request->logo,
        ]);
     return redirect()->back()->with('message','EPMRESA MODIFICADA CORRECTAMENTE');
 
@@ -42,7 +42,14 @@ class EmpresaController extends Controller
             'name' => 'required',
             'email' => 'email',
         ]);
-        Empresa::create($request->all());
+       $file = $request->logo->store('uploads','public');
+    
+        Empresa::create([
+            "name" =>$request->name,
+            "email" =>$request->email,
+            "logo" =>$file,
+            "website" =>$request->website,
+        ]);
         $empresas = Empresa::all();
         return redirect()->back()->with("message","EMPRESA SE HA CREADO CORRECTAMENTE");
     }

@@ -9,7 +9,7 @@
                 <h5 class="card-title">AÑADIR EMPRESA</h5>
             </div>
             <div class="card-body">
-                <form method="post" action="/e">
+                <form method="post" action="/e" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label>Nombre Empresa:</label>

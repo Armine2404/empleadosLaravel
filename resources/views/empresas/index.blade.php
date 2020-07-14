@@ -32,7 +32,7 @@
                                     <td>{{$empresa->name}}</td>
                                     <td>{{$empresa->email}}</td>
                                     <td>{{$empresa->website}}</td>
-                                    <td>{{$empresa->logo}}</td>
+                                    <td><img src= "/storage/{{$empresa->logo}}" width="80" /></td>
                                     <td><a href="/empresa/edit/{{$empresa->id}}"><i class="fas fa-pen"
                                                 style="color:grey"></i></a></td>
                                     <td><a onClick="return confirm('Estas seguro en elimiar al cliente {{$empresa->name}}?');"

@@ -61,7 +61,6 @@
                     <div class="form-group">
                         <label for="empresa">Empresa</label>
                         <select type="text" name="empresas_id" class="form-control form-control-sm">
-                            <option  value = "{{$empleadoUpdate->empresas_id}}" selected>{{$empleadoUpdate->name}}</option>
                             @foreach($empresas as $empresa)
                             <option value="{{$empresa->id}}"> {{$empresa->name}}</option>
                             @endforeach
