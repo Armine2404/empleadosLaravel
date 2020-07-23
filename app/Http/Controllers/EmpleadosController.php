@@ -7,12 +7,17 @@ use App\Empleados;
 use App\Empresa;
 class EmpleadosController extends Controller
 {
+
+    public function _constract()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $empleados = Empleados::select("empresas.name","empleados.id","empleados.firstName","empleados.lastName",
         "empleados.email","empleados.phone")->
-        join('empresas', 'empresas.id', '=', 'empleados.empresas_id')->
-        get();
+        join('empresas', 'empresas.id', '=', 'empleados.empresas_id')->paginate(5);
+       
         // $empleados = Empleados::all();
         return view('empleados.index', compact('empleados'));
     }

@@ -7,9 +7,14 @@ use App\Empresa;
 
 class EmpresaController extends Controller
 {
+    public function _constract()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {  
-        $empresas = Empresa::all();
+        $empresas = Empresa::paginate(5);
+
         return view('empresas.index',compact('empresas'));
     }
     public function edit(Empresa $empresa)

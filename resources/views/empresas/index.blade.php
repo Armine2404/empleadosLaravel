@@ -48,6 +48,11 @@
                         </table>
                     </div>
                     <!-- /.card-body -->
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                            {{ $empresas->links() }}
+                        </div>
+                    </div>
                 </div>
                 <!-- /.card -->
             </div>
