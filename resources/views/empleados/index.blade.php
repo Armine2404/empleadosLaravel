@@ -11,7 +11,7 @@
                 <div class="card shadow ">
                     <div class="card-header justify-content-between bg-warning d-flex">
                         <h5 class="card-title ">EMPLEADOS</h5>
-                        <a class="btn btn-warning" href="/empleados/create">AÑADIR EMPLEADO</a>
+                        <a class="btn btn-warning" href="/empleados/create"><i class="fas fa-user-plus"></i> Añadir Empleado</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
